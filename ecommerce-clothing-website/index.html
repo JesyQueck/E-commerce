@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLLYP CLOTHING</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>HOLLYP CLOTHING</h1>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div>
+                <button id="darkModeToggle" class="button" aria-label="Toggle dark mode">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+                <button id="cartBtn" class="button" aria-label="View cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Landing Hero Section OUTSIDE container -->
+    <section class="landing-hero">
+        <div class="landing-content">
+            <div class="landing-text">
+                <h2>Step Into Style</h2>
+                <p>Discover the latest trends in fashion. Shop exclusive collections for Men, Women, and Kids. Elevate your wardrobe today!</p>
+                <a href="#shop" class="button">Shop Now</a>
+            </div>
+            <div class="landing-image">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Fashionable Model">
+            </div>
+        </div>
+    </section>
+    <main class="container">
+        <!-- MEN CATEGORY -->
+        <h2 id="products" class="category-title">Men</h2>
+        <section class="product-grid">
+            <div class="product" data-id="m1" data-title="Men's Classic Tee" data-price="29.99">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Men's Classic Tee">
+                <h2>Classic Tee</h2>
+                <p>$29.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="m2" data-title="Men's Denim Jacket" data-price="59.99">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Men's Denim Jacket">
+                <h2>Denim Jacket</h2>
+                <p>$59.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="m3" data-title="Men's Sport Hoodie" data-price="34.99">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Men's Sport Hoodie">
+                <h2>Sport Hoodie</h2>
+                <p>$34.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="m4" data-title="Men's Sneakers" data-price="49.99">
+                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Men's Sneakers">
+                <h2>Sneakers</h2>
+                <p>$49.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="m5" data-title="Men's Leather Jacket" data-price="89.99">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Men's Leather Jacket">
+                <h2>Leather Jacket</h2>
+                <p>$89.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="m6" data-title="Men's Chinos" data-price="39.99">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Men's Chinos">
+                <h2>Chinos</h2>
+                <p>$39.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="m7" data-title="Men's Polo Shirt" data-price="27.99">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Men's Polo Shirt">
+                <h2>Polo Shirt</h2>
+                <p>$27.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="m8" data-title="Men's Formal Suit" data-price="129.99">
+                <img src="https://images.unsplash.com/photo-1526178613658-3f1622045564?auto=format&fit=crop&w=400&q=80" alt="Men's Formal Suit">
+                <h2>Formal Suit</h2>
+                <p>$129.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <!-- WOMEN CATEGORY -->
+        <h2 class="category-title">Women</h2>
+        <section class="product-grid">
+            <div class="product" data-id="w1" data-title="Women's Summer Dress" data-price="39.99">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Women's Summer Dress">
+                <h2>Summer Dress</h2>
+                <p>$39.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="w2" data-title="Women's Leather Bag" data-price="79.99">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Women's Leather Bag">
+                <h2>Leather Bag</h2>
+                <p>$79.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="w3" data-title="Women's Elegant Hat" data-price="24.99">
+                <img src="https://img.freepik.com/free-photo/hat-fashion_1203-7634.jpg?w=400&t=st=1717430000~exp=1717430600~hmac=8e2e7e5e3e9b2e7e5e3e9b2e7e5e3e9b2" alt="Women's Elegant Hat">
+                <h2>Elegant Hat</h2>
+                <p>$24.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="w4" data-title="Women's Denim Jacket" data-price="59.99">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Women's Denim Jacket">
+                <h2>Denim Jacket</h2>
+                <p>$59.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="w5" data-title="Women's Fashion Sunglasses" data-price="19.99">
+                <img src="https://images.unsplash.com/photo-1469398715555-76331a6c7c9b?auto=format&fit=crop&w=400&q=80" alt="Women's Fashion Sunglasses">
+                <h2>Fashion Sunglasses</h2>
+                <p>$19.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="w6" data-title="Women's Blazer" data-price="54.99">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Women's Blazer">
+                <h2>Blazer</h2>
+                <p>$54.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="w7" data-title="Women's Cardigan" data-price="34.99">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Women's Cardigan">
+                <h2>Cardigan</h2>
+                <p>$34.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="w8" data-title="Women's Skirt" data-price="29.99">
+                <img src="https://images.unsplash.com/photo-1469398715555-76331a6c7c9b?auto=format&fit=crop&w=400&q=80" alt="Women's Skirt">
+                <h2>Skirt</h2>
+                <p>$29.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <!-- KIDS CATEGORY -->
+        <h2 class="category-title">Kids</h2>
+        <section class="product-grid">
+            <div class="product" data-id="k1" data-title="Kids T-shirt" data-price="14.99">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Kids T-shirt">
+                <h2>Kids T-shirt</h2>
+                <p>$14.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="k2" data-title="Kids Sneakers" data-price="22.99">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Kids Sneakers">
+                <h2>Kids Sneakers</h2>
+                <p>$22.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="k3" data-title="Kids Hoodie" data-price="24.99">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Kids Hoodie">
+                <h2>Kids Hoodie</h2>
+                <p>$24.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="k4" data-title="Kids Dress" data-price="29.99">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Kids Dress">
+                <h2>Kids Dress</h2>
+                <p>$29.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="k5" data-title="Kids Shorts" data-price="12.99">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Kids Shorts">
+                <h2>Kids Shorts</h2>
+                <p>$12.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="k6" data-title="Kids Cap" data-price="9.99">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Kids Cap">
+                <h2>Kids Cap</h2>
+                <p>$9.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="k7" data-title="Kids Overalls" data-price="19.99">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Kids Overalls">
+                <h2>Kids Overalls</h2>
+                <p>$19.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="k8" data-title="Kids Raincoat" data-price="24.99">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Kids Raincoat">
+                <h2>Kids Raincoat</h2>
+                <p>$24.99</p>
+                <button class="button add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <section id="cartSection" class="cart-section" style="display:none;">
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+            <p id="cartTotal"></p>
+            <button id="checkoutBtn" class="button">Checkout</button>
+        </section>
+    </main>
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo"><i class="fa-solid fa-shirt"></i> HOLLYP CLOTHING</span>
+                <p>Elevate your style with our exclusive collections for Men, Women, and Kids.</p>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-envelope"></i> support@hollypclothing.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 Fashion Ave, Lagos, Nigeria</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <strong>Quick Links</strong>
+                <a href="index.html">Home</a>
+                <a href="#products">Products</a>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#">FAQs</a>
+                <a href="#">Shipping & Returns</a>
+            </div>
+            <div class="footer-newsletter">
+                <strong>Subscribe to our Newsletter</strong>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 HOLLYP CLOTHING. All rights reserved. | Designed with <i class="fa-solid fa-heart" style="color:#e74c3c"></i>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
