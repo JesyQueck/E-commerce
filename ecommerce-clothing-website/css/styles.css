@@ -392,6 +392,429 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   border: none;
 }
 
+/* Contact Page Styles */
+/* =================== */
+
+.contact-header {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  padding: 32px 0 16px 0;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1abc9c;
+  margin-bottom: 10px;
+}
+
+.contact-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.contact-header nav ul li a {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08em;
+  padding: 8px 16px;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-header nav ul li a:hover,
+.contact-header nav ul li a:focus {
+  background: #e6f9f5;
+  color: #1abc9c;
+}
+
+.contact-main {
+  max-width: 500px;
+  margin: 48px auto 32px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(30,34,90,0.06);
+  padding: 36px 28px 32px 28px;
+}
+
+.contact-main h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.contact-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-main label {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.contact-main input,
+.contact-main textarea {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1em;
+  padding: 10px 12px;
+  border: 1.5px solid #e6f9f5;
+  border-radius: 10px;
+  background: #f8f8f8;
+  color: #222;
+  transition: border 0.2s;
+  resize: none;
+}
+
+.contact-main input:focus,
+.contact-main textarea:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+.contact-main button[type="submit"] {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.08em;
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.contact-main button[type="submit"]:hover {
+  background: #159c86;
+}
+
+.contact-footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  font-size: 1em;
+  margin-top: 40px;
+  border-top: 1px solid #ececec;
+}
+
+
+/* Cart Page Styles */
+/* =================== */
+
+.cart-header {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  padding: 32px 0 16px 0;
+  text-align: center;
+}
+
+.cart-header h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1abc9c;
+  margin-bottom: 10px;
+}
+
+.cart-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.cart-header nav ul li a {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08em;
+  padding: 8px 16px;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cart-header nav ul li a:hover,
+.cart-header nav ul li a:focus {
+  background: #e6f9f5;
+  color: #1abc9c;
+}
+
+main {
+  max-width: 900px;
+  margin: 48px auto 32px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(30,34,90,0.06);
+  padding: 36px 28px 32px 28px;
+}
+
+#cart-items h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+#cart-items table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#cart-items th, #cart-items td {
+  padding: 14px 10px;
+  text-align: center;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+#cart-items th {
+  background: #e6f9f5;
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+#cart-items td {
+  border-bottom: 1px solid #ececec;
+  font-size: 1em;
+  color: #222;
+}
+
+#cart-items tr:last-child td {
+  border-bottom: none;
+}
+
+#cart-summary {
+  background: #f7f7f5;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 18px;
+  text-align: right;
+  box-shadow: 0 1px 6px rgba(30,34,90,0.04);
+}
+
+#cart-summary h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.15em;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+#total-price {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #1abc9c;
+  margin-bottom: 12px;
+}
+
+#checkout-button {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.08em;
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#checkout-button:hover {
+  background: #159c86;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  font-size: 1em;
+  margin-top: 40px;
+  border-top: 1px solid #ececec;
+}
+
+/* Checkout Page Styles */
+/* ==================== */
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  padding: 32px 0 16px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1abc9c;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+header nav ul li a {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08em;
+  padding: 8px 16px;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  background: #e6f9f5;
+  color: #1abc9c;
+}
+
+main {
+  max-width: 500px;
+  margin: 48px auto 32px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(30,34,90,0.06);
+  padding: 36px 28px 32px 28px;
+}
+
+#checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#checkout-form h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  margin-top: 18px;
+  text-align: left;
+}
+
+#checkout-form label {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+#checkout-form input {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1em;
+  padding: 10px 12px;
+  border: 1.5px solid #e6f9f5;
+  border-radius: 10px;
+  background: #f8f8f8;
+  color: #222;
+  transition: border 0.2s;
+}
+
+#checkout-form input:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+#checkout-form button[type="submit"] {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.08em;
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 12px;
+}
+
+#checkout-form button[type="submit"]:hover {
+  background: #159c86;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  font-size: 1em;
+  margin-top: 40px;
+  border-top: 1px solid #ececec;
+}
+
+/* Product Filter Dropdown */
+.product-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 32px auto;
+  max-width: 1200px;
+  padding: 0 16px;
+}
+
+.product-filter label {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  color: #222;
+}
+
+.product-filter select {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-size: 1em;
+  padding: 8px 16px;
+  border-radius: 18px;
+  border: 1.5px solid #e6f9f5;
+  background: #f8f8f8;
+  color: #222;
+  transition: border 0.2s;
+}
+
+.product-filter select:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .ab-nav, .ab-footer-content {
@@ -421,6 +844,24 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   }
   .allbirds-hero-text p {
     font-size: 1em;
+  }
+}
+@media (max-width: 600px) {
+  .contact-main {
+    padding: 18px 6px 18px 6px;
+  }
+  .contact-header nav ul {
+    gap: 12px;
+  }
+  main {
+    padding: 18px 6px 18px 6px;
+  }
+  #cart-items table, #cart-items th, #cart-items td {
+    font-size: 0.98em;
+    padding: 8px 4px;
+  }
+  .cart-header nav ul {
+    gap: 12px;
   }
 }
 

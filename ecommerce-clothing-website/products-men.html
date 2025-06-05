@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products - HOLLYP CLOTHING</title>
+  <title>Men's Products - HOLLYP CLOTHING</title>
   <link rel="stylesheet" href="css/styles.css">
   <!-- Google Fonts and Font Awesome links here -->
 </head>
@@ -25,36 +25,35 @@
     </nav>
   </header>
   <main class="ab-main">
-    <h2 class="ab-section-title">Our Products</h2>
+    <h2 class="ab-section-title">Men's Collection</h2>
     <div class="product-filter">
       <label for="category-select">Browse by:</label>
       <select id="category-select" onchange="location = this.value;">
         <option value="products.html">All</option>
-        <option value="products-men.html">Men</option>
+        <option value="products-men.html" selected>Men</option>
         <option value="products-women.html">Women</option>
         <option value="products-kids.html">Kids</option>
       </select>
     </div>
     <section class="ab-product-grid">
-      <article class="product-item">
-        <img src="images/product1.jpg" alt="Product 1">
-        <h2>Product 1</h2>
-        <p>Description of Product 1.</p>
-        <a href="product-details.html?id=1">View Details</a>
-      </article>
-      <article class="product-item">
-        <img src="images/product2.jpg" alt="Product 2">
-        <h2>Product 2</h2>
-        <p>Description of Product 2.</p>
-        <a href="product-details.html?id=2">View Details</a>
-      </article>
-      <article class="product-item">
-        <img src="images/product3.jpg" alt="Product 3">
-        <h2>Product 3</h2>
-        <p>Description of Product 3.</p>
-        <a href="product-details.html?id=3">View Details</a>
-      </article>
-      <!-- Add more products as needed -->
+      <!-- Men’s product cards -->
+      <div class="ab-product-card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Men's Classic Tee">
+        <div class="ab-product-info">
+          <h3>Classic Tee</h3>
+          <p>$29.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card">
+        <img src="https://images.unsplash.com/photo-1526178613658-3f1622045564?auto=format&fit=crop&w=400&q=80" alt="Men's Formal Suit">
+        <div class="ab-product-info">
+          <h3>Formal Suit</h3>
+          <p>$129.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Add more men's products as needed -->
     </section>
   </main>
   <footer class="ab-footer" id="contact">
