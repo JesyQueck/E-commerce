@@ -234,47 +234,92 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
 .ab-footer {
   background: #222;
   color: #fff;
-  padding: 48px 0 18px 0;
+  padding: 40px 0 0 0;
   font-size: 1.05em;
-  margin-top: 40px;
+  margin-top: 0;
   border-top: 1.5px solid #ececec;
 }
+
 .ab-footer-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 1200px;
-  margin: 0 auto 12px auto;
-  flex-wrap: wrap;
+  margin: 0 auto;
   gap: 32px;
-  padding: 0 32px;
+  padding: 0 24px 24px 24px;
+  box-sizing: border-box;
 }
-.ab-footer-brand {
+
+.ab-footer-brand,
+.ab-footer-links,
+.ab-footer-newsletter {
   flex: 1 1 220px;
   min-width: 180px;
+  margin: 0;
+  padding: 0;
 }
+
+.ab-footer-brand {
+  max-width: 320px;
+}
+
 .ab-footer-links {
-  flex: 1 1 160px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  min-width: 120px;
+  gap: 10px;
 }
+
+.footer-links-columns {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.footer-links-columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ab-footer-links strong {
+  font-size: 1.08em;
+  margin-bottom: 6px;
+  color: #1abc9c;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
 .ab-footer-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   border-radius: 8px;
-  padding: 6px 0;
+  padding: 4px 0;
   transition: color 0.2s, text-decoration 0.2s;
   display: inline-block;
 }
+
 .ab-footer-links a:hover,
 .ab-footer-links a:focus {
   color: #1abc9c;
   text-decoration: underline;
-  background: none;
 }
+
+.ab-footer-newsletter strong {
+  font-size: 1.08em;
+  color: #1abc9c;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.ab-footer-newsletter form {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .ab-footer-newsletter input[type="email"] {
   padding: 8px 12px;
   border: none;
@@ -285,6 +330,7 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   background: #fff;
   color: #222;
 }
+
 .ab-footer-newsletter button {
   background: #1abc9c;
   color: #fff;
@@ -295,25 +341,53 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   cursor: pointer;
   transition: background 0.2s;
 }
+
 .ab-footer-newsletter button:hover {
   background: #159c86;
 }
+
+.ab-footer-social {
+  margin-top: 8px;
+}
+
 .ab-footer-social a {
   color: #fff;
   font-size: 1.3em;
   margin-right: 12px;
   transition: color 0.2s;
 }
+
 .ab-footer-social a:hover {
   color: #1abc9c;
 }
+
 .ab-footer-bottom {
   text-align: center;
   color: #bbb;
   font-size: 0.98em;
-  padding-top: 12px;
+  padding: 18px 0 10px 0;
   border-top: 1px solid #333;
   letter-spacing: 1px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .ab-footer-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 0 12px 18px 12px;
+  }
+  .ab-footer-brand,
+  .ab-footer-links,
+  .ab-footer-newsletter {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .footer-links-columns {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /* Add to your styles.css for Allbirds-style hero */
@@ -658,7 +732,7 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   color: #fff;
 }
 
-/* Product Filter Styling */
+/* Product Filter Styling (shared across all product pages) */
 .product-filter {
   display: flex;
   align-items: center;
@@ -668,6 +742,9 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   background: #f8f8f8;
   border-radius: 12px;
   box-shadow: 0 1px 6px rgba(30,34,90,0.04);
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-filter label {
@@ -693,6 +770,172 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   border: 1.5px solid #1abc9c;
 }
 
+/* --- Animations for Product Cards and Buttons --- */
+
+/* Fade-in animation for product cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ab-product-card {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: 0.1s;
+}
+
+/* Staggered animation for each card */
+.ab-product-grid .ab-product-card:nth-child(1) { animation-delay: 0.1s; }
+.ab-product-grid .ab-product-card:nth-child(2) { animation-delay: 0.2s; }
+.ab-product-grid .ab-product-card:nth-child(3) { animation-delay: 0.3s; }
+.ab-product-grid .ab-product-card:nth-child(4) { animation-delay: 0.4s; }
+.ab-product-grid .ab-product-card:nth-child(5) { animation-delay: 0.5s; }
+.ab-product-grid .ab-product-card:nth-child(6) { animation-delay: 0.6s; }
+.ab-product-grid .ab-product-card:nth-child(7) { animation-delay: 0.7s; }
+.ab-product-grid .ab-product-card:nth-child(9) { animation-delay: 0.9s; }
+.ab-product-grid .ab-product-card:nth-child(10) { animation-delay: 1.0s; }
+.ab-product-grid .ab-product-card:nth-child(11) { animation-delay: 1.1s; }
+.ab-product-grid .ab-product-card:nth-child(12) { animation-delay: 1.2s; }
+
+/* Button hover animation */
+.ab-btn,
+.ab-btn-secondary,
+.add-to-cart {
+  transition: transform 0.15s cubic-bezier(.4,2,.6,1), box-shadow 0.15s;
+}
+
+.ab-btn:hover,
+.ab-btn-secondary:hover,
+.add-to-cart:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 4px 18px rgba(30,34,90,0.10);
+}
+
+/* Cart table row hover effect */
+.cart-table tbody tr {
+  transition: background 0.2s;
+}
+.cart-table tbody tr:hover {
+  background: #e6f9f5;
+}
+
+/* --- Features Section --- */
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 48px auto 32px auto;
+  max-width: 1000px;
+  padding: 24px 0;
+  background: #f8f8f8;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(30,34,90,0.06);
+}
+
+.feature {
+  flex: 1 1 0;
+  text-align: center;
+  padding: 18px 12px;
+  border-radius: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: #fff;
+  margin: 0 8px;
+}
+
+.feature i {
+  font-size: 2.2em;
+  color: #1abc9c;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.feature h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18em;
+  font-weight: 700;
+  margin: 10px 0 8px 0;
+  color: #222;
+}
+
+.feature p {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #555;
+  font-size: 1em;
+}
+
+.feature:hover {
+  box-shadow: 0 4px 24px rgba(30,34,90,0.10);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+  max-width: 480px;
+  margin: 40px auto 32px auto;
+  background: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 1px 8px rgba(30,34,90,0.06);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+}
+
+.newsletter-section h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #1abc9c;
+  margin-bottom: 16px;
+}
+
+.newsletter-section form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.newsletter-section input[type="email"] {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e6f9f5;
+  font-size: 1em;
+  font-family: 'Inter', Arial, sans-serif;
+  outline: none;
+  width: 60%;
+  transition: border 0.2s;
+}
+
+.newsletter-section input[type="email"]:focus {
+  border: 1.5px solid #1abc9c;
+}
+
+.newsletter-section button {
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.newsletter-section button:hover {
+  background: #159c86;
+}
+
 @media (max-width: 700px) {
   .footer-links-columns {
     flex-direction: column;
@@ -713,5 +956,13 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
     align-items: stretch;
     gap: 8px;
     padding: 10px 6px;
+  }
+  .features-section {
+    flex-direction: column;
+    gap: 18px;
+    padding: 12px 0;
+  }
+  .feature {
+    margin: 0;
   }
 }

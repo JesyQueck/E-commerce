@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products - HOLLYP CLOTHING</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google Fonts and Font Awesome links here -->
 </head>
 <body>
@@ -12,6 +13,7 @@
     <nav class="ab-nav">
       <div class="ab-nav-left">
         <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
       </div>
       <a href="index.html" class="ab-logo">HOLLYP</a>
       <div class="ab-nav-right">
@@ -26,10 +28,10 @@
   </header>
   <main class="ab-main">
     <h2 class="ab-section-title">Our Products</h2>
-    <div class="product-filter">
+    <div class="product-filter" style="max-width: 350px; margin: 18px auto 24px auto; padding: 8px 12px;">
       <label for="category-select">Browse by:</label>
       <select id="category-select" onchange="location = this.value;">
-        <option value="products.html">All</option>
+        <option value="products.html" selected>All</option>
         <option value="products-men.html">Men</option>
         <option value="products-women.html">Women</option>
         <option value="products-kids.html">Kids</option>
@@ -52,7 +54,86 @@
           <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
         </div>
       </div>
-      <!-- Add more products as needed -->
+      <div class="ab-product-card" data-id="denim-jacket" data-title="Denim Jacket" data-price="54.99">
+        <img src="..." alt="Denim Jacket">
+        <div class="ab-product-info">
+          <h3>Denim Jacket</h3>
+          <p>$54.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="kids-hoodie" data-title="Kids' Hoodie" data-price="24.99">
+        <img src="..." alt="Kids' Hoodie">
+        <div class="ab-product-info">
+          <h3>Kids' Hoodie</h3>
+          <p>$24.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="polo-shirt" data-title="Polo Shirt" data-price="27.99">
+        <img src="..." alt="Polo Shirt">
+        <div class="ab-product-info">
+          <h3>Polo Shirt</h3>
+          <p>$27.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="sneakers" data-title="Sneakers" data-price="49.99">
+        <img src="..." alt="Sneakers">
+        <div class="ab-product-info">
+          <h3>Sneakers</h3>
+          <p>$49.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="summer-shorts" data-title="Summer Shorts" data-price="22.99">
+        <img src="..." alt="Summer Shorts">
+        <div class="ab-product-info">
+          <h3>Summer Shorts</h3>
+          <p>$22.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="leather-belt" data-title="Leather Belt" data-price="19.99">
+        <img src="..." alt="Leather Belt">
+        <div class="ab-product-info">
+          <h3>Leather Belt</h3>
+          <p>$19.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="hooded-jacket" data-title="Hooded Jacket" data-price="64.99">
+        <img src="..." alt="Hooded Jacket">
+        <div class="ab-product-info">
+          <h3>Hooded Jacket</h3>
+          <p>$64.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="ankle-boots" data-title="Ankle Boots" data-price="79.99">
+        <img src="..." alt="Ankle Boots">
+        <div class="ab-product-info">
+          <h3>Ankle Boots</h3>
+          <p>$79.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="graphic-tee" data-title="Graphic Tee" data-price="25.99">
+        <img src="..." alt="Graphic Tee">
+        <div class="ab-product-info">
+          <h3>Graphic Tee</h3>
+          <p>$25.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <div class="ab-product-card" data-id="wool-scarf" data-title="Wool Scarf" data-price="15.99">
+        <img src="..." alt="Wool Scarf">
+        <div class="ab-product-info">
+          <h3>Wool Scarf</h3>
+          <p>$15.99</p>
+          <button class="ab-btn ab-btn-secondary add-to-cart">Add to Cart</button>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="ab-footer" id="contact">
