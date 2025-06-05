@@ -658,6 +658,41 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   color: #fff;
 }
 
+/* Product Filter Styling */
+.product-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 32px 0;
+  padding: 12px 18px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(30,34,90,0.04);
+}
+
+.product-filter label {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  color: #1abc9c;
+  font-size: 1.08em;
+}
+
+.product-filter select {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1em;
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1px solid #e6f9f5;
+  background: #fff;
+  color: #222;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.product-filter select:focus {
+  border: 1.5px solid #1abc9c;
+}
+
 @media (max-width: 700px) {
   .footer-links-columns {
     flex-direction: column;
@@ -672,5 +707,11 @@ h1, h2, h3, h4, h5, h6, .ab-logo, .ab-section-title {
   }
   #cart-summary {
     padding: 12px 6px;
+  }
+  .product-filter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 6px;
   }
 }

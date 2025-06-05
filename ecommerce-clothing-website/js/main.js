@@ -36,12 +36,16 @@ function renderCartPage() {
     }
 
     cart.forEach((item, idx) => {
+        // Ensure price is a valid number
+        const price = typeof item.price === 'number' && !isNaN(item.price) ? item.price : 0;
+        const totalPrice = price * item.qty;
+
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${item.title}</td>
             <td>${item.qty}</td>
-            <td>$${item.price.toFixed(2)}</td>
-            <td>$${(item.price * item.qty).toFixed(2)}</td>
+            <td>$${price.toFixed(2)}</td>
+            <td>$${totalPrice.toFixed(2)}</td>
             <td>
                 <button class="cart-action-btn" data-idx="${idx}" title="Remove">
                     <i class="fa fa-trash"></i>
@@ -49,7 +53,7 @@ function renderCartPage() {
             </td>
         `;
         cartTableBody.appendChild(row);
-        total += item.price * item.qty;
+        total += totalPrice;
     });
 
     cartTotalContainer.textContent = `Total: $${total.toFixed(2)}`;
@@ -90,12 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTableBody = document.getElementById('cart-table-body');
     if (cartTableBody) {
         cartTableBody.addEventListener('click', function(e) {
-            if (e.target.closest('.cart-action-btn')) {
-                const idx = e.target.closest('.cart-action-btn').dataset.idx;
-                cart.splice(idx, 1);
-                saveCart();
-                updateCartCount();
-                renderCartPage();
+            const btn = e.target.closest('.cart-action-btn');
+            if (btn) {
+                const idx = parseInt(btn.dataset.idx, 10);
+                if (!isNaN(idx)) {
+                    cart.splice(idx, 1);
+                    saveCart();
+                    updateCartCount();
+                    renderCartPage();
+                }
             }
         });
     }
