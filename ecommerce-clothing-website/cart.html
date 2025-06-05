@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - E-commerce Clothing Website</title>
+    <title>Shopping Cart - HOLLYP CLOTHING</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800,700,600,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header class="cart-header">
-        <h1>Your Shopping Cart</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav class="ab-nav">
+            <div class="ab-nav-left">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+            </div>
+            <a href="index.html" class="ab-logo">HOLLYP</a>
+            <div class="ab-nav-right">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button id="cartBtn" class="ab-cart" aria-label="View cart">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span id="cartCount">0</span>
+                </button>
+            </div>
         </nav>
     </header>
-    
+
     <main>
-        <section id="cart-items">
-            <h2>Your Selected Items</h2>
-            <table>
+        <section class="cart-container">
+            <h1>Your Shopping Cart</h1>
+            <table class="cart-table">
                 <thead>
                     <tr>
                         <th>Product</th>
@@ -33,24 +43,65 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Cart items will be dynamically inserted here -->
+                <tbody id="cart-table-body">
+                    <!-- Cart items will be inserted here -->
                 </tbody>
             </table>
             <div id="cart-summary">
                 <h3>Cart Summary</h3>
-                <p id="total-price">Total Price: $0.00</p>
+                <div id="cart-total"></div>
                 <button id="checkout-button">Proceed to Checkout</button>
             </div>
+            <div id="cart-empty-message" style="display:none; text-align:center; margin:32px 0; color:#888;">
+                <i class="fa fa-shopping-cart" style="font-size:2em; margin-bottom:8px;"></i>
+                <p>Your cart is empty.</p>
+                <a href="products.html" class="ab-btn ab-btn-secondary">Continue Shopping</a>
+            </div>
         </section>
-        <div id="cart-items"></div>
-        <div id="cart-total"></div>
     </main>
 
-    <footer>
-        <p>&copy; 2023 E-commerce Clothing Website. All rights reserved.</p>
+    <footer class="ab-footer">
+        <div class="ab-footer-content">
+            <div class="ab-footer-brand">
+                <span class="ab-logo">HOLLYP</span>
+                <p>Premium tailoring and timeless clothing for every occasion.<br>
+                <i class="fa-solid fa-location-dot"></i> 123 Fashion Ave, Lagos, Nigeria<br>
+                <i class="fa-solid fa-envelope"></i> support@hollypclothing.com<br>
+                <i class="fa-solid fa-phone"></i> +1 (555) 123-4567
+                </p>
+            </div>
+            <div class="ab-footer-links">
+                <strong>Quick Links</strong>
+                <div class="footer-links-columns">
+                    <div>
+                        <a href="products-men.html">Men</a>
+                        <a href="products-women.html">Women</a>
+                        <a href="products-kids.html">Kids</a>
+                        <a href="about.html">About</a>
+                    </div>
+                    <div>
+                        <a href="contact.html">Contact</a>
+                        <a href="#">FAQs</a>
+                        <a href="#">Shipping & Returns</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ab-footer-newsletter">
+                <strong>Subscribe to our Newsletter</strong>
+                <form>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <div class="ab-footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="ab-footer-bottom">
+            &copy; 2025 HOLLYP. All rights reserved. | Designed with <i class="fa-solid fa-heart" style="color:#e74c3c"></i>
+        </div>
     </footer>
-
     <script src="js/main.js"></script>
 </body>
 </html>

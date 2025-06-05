@@ -17,28 +17,38 @@ function updateCartCount() {
 
 // Render cart items and total on cart.html
 function renderCartPage() {
-    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTableBody = document.getElementById('cart-table-body');
     const cartTotalContainer = document.getElementById('cart-total');
-    if (!cartItemsContainer || !cartTotalContainer) return;
+    const cartSummary = document.getElementById('cart-summary');
+    const cartEmptyMessage = document.getElementById('cart-empty-message');
+    if (!cartTableBody || !cartTotalContainer) return;
 
-    cartItemsContainer.innerHTML = '';
+    cartTableBody.innerHTML = '';
     let total = 0;
 
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
-        cartTotalContainer.textContent = '';
+        if (cartSummary) cartSummary.style.display = 'none';
+        if (cartEmptyMessage) cartEmptyMessage.style.display = 'block';
         return;
+    } else {
+        if (cartSummary) cartSummary.style.display = 'block';
+        if (cartEmptyMessage) cartEmptyMessage.style.display = 'none';
     }
 
-    cart.forEach(item => {
-        const itemRow = document.createElement('div');
-        itemRow.className = 'cart-item-row';
-        itemRow.innerHTML = `
-            <span class="cart-item-title">${item.title}</span>
-            <span class="cart-item-qty">x${item.qty}</span>
-            <span class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</span>
+    cart.forEach((item, idx) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.title}</td>
+            <td>${item.qty}</td>
+            <td>$${item.price.toFixed(2)}</td>
+            <td>$${(item.price * item.qty).toFixed(2)}</td>
+            <td>
+                <button class="cart-action-btn" data-idx="${idx}" title="Remove">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
         `;
-        cartItemsContainer.appendChild(itemRow);
+        cartTableBody.appendChild(row);
         total += item.price * item.qty;
     });
 
@@ -75,6 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Render cart page if on cart.html
     renderCartPage();
+
+    // Remove item event
+    const cartTableBody = document.getElementById('cart-table-body');
+    if (cartTableBody) {
+        cartTableBody.addEventListener('click', function(e) {
+            if (e.target.closest('.cart-action-btn')) {
+                const idx = e.target.closest('.cart-action-btn').dataset.idx;
+                cart.splice(idx, 1);
+                saveCart();
+                updateCartCount();
+                renderCartPage();
+            }
+        });
+    }
 
     // Make cart icon go to cart page
     const cartBtn = document.getElementById('cartBtn');
